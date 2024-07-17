@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="PdfMergeInfo" targetNamespace="http://tempuri.org/PdfMergeInfo.xsd" xmlns:mstns="http://tempuri.org/PdfMergeInfo.xsd" xmlns="http://tempuri.org/PdfMergeInfo.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="PdfMergeInfo" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="PdfMergeInfo" msprop:Generator_DataSetName="PdfMergeInfo">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="PdfMergeInfoTable" msprop:Generator_RowEvHandlerName="PdfMergeInfoTableRowChangeEventHandler" msprop:Generator_RowDeletedName="PdfMergeInfoTableRowDeleted" msprop:Generator_RowDeletingName="PdfMergeInfoTableRowDeleting" msprop:Generator_RowEvArgName="PdfMergeInfoTableRowChangeEvent" msprop:Generator_TablePropName="PdfMergeInfoTable" msprop:Generator_RowChangedName="PdfMergeInfoTableRowChanged" msprop:Generator_RowChangingName="PdfMergeInfoTableRowChanging" msprop:Generator_TableClassName="PdfMergeInfoTableDataTable" msprop:Generator_RowClassName="PdfMergeInfoTableRow" msprop:Generator_TableVarName="tablePdfMergeInfoTable" msprop:Generator_UserTableName="PdfMergeInfoTable">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Guid" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="Guid" msprop:Generator_ColumnPropNameInTable="GuidColumn" msprop:Generator_ColumnVarNameInTable="columnGuid" msprop:Generator_UserColumnName="Guid" type="xs:string" />
+              <xs:element name="Path" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="Path" msprop:Generator_ColumnPropNameInTable="PathColumn" msprop:Generator_ColumnVarNameInTable="columnPath" msprop:Generator_UserColumnName="Path" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:PdfMergeInfoTable" />
+      <xs:field xpath="mstns:Guid" />
+    </xs:unique>
+    <xs:unique name="Constraint2">
+      <xs:selector xpath=".//mstns:PdfMergeInfoTable" />
+      <xs:field xpath="mstns:Path" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
