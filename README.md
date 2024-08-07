@@ -2,29 +2,32 @@
 
 # PDF Library
 
-`PDF Page Splitter` is an efficient, console-based C# application that reads and processes PDF files from a specified folder, identifies any existing whitespace labels, and subsequently creates separate, paginated PDF files. The application not only robustly handles errors but also maintains a comprehensive logging system for all operational activities.
+`PDF Library` is an efficient C# library that implements lots of functionalities on PDF files like compressing, font-embedding, cropping, merging, splitting, extracting, rotating and much more.
+Because it does not need to display the PDF while performing the specified action, it is quite a lot faster then any PDF-Application like for example Adobe.
+The library not only robustly handles errors but also maintains a comprehensive logging system for all operational activities.
+Additionally for all operational activities, it creates a backup that can be restored later on.
 
-## Features
+## Featuresrückseite
 
-- **Whitespace Detection:** Capable of pinpointing whitespace labels within PDF files.
-- **PDF Pagination:** Paginates and creates separate PDF files upon detection of whitespace labels.
-- **Logging System:** Maintains an extensive log of all operations, errors, and informational messages.
-- **File Management:** Handles duplicate files by moving them to a "rejected files" folder and updating the log.
-- **Database Interactions:** Communicates with a database to track file status and handle duplications.
-- **Archiving:** Upon successful processing, files are transferred to an "archived" folder.
+- **Compress:** Removes duplicated references of images and other resources and therefore reduces a lot of space in the PDF-filesize.
+- **Font-Infos:** Retrieves all the informations from the fonts used in a PDF file including base-font, sub-type, encoding, if embedded or not, if subset or not and more.
+- **Embed Fonts:** Unembedded fonts can be embedded, when there is a font in the font-database that matches the font-informations.
+- **Optimize:** Tries to embed all the unembedded fonts where possible and compresses PDF file.
+- **Merge:** Multiple PDF files can be merged into one PDF file.
+- **Split:** PDF files can be split by a certain amount of pages.
+- **Crop:** Pages can be cropped to A4 or other sizes.
+- **Page-Operations:** There are lots of operations that can be performed on a page-level like removing empty pages, extract or multiply or rotate pages, insert pages, and more.
+- **Restore:** Before performing an operation that will change the PDF file, a backup will be created, that can be restored later on.
 
 ## Usage Guide
 
 1. **Clone the Repository:** Clone this repository to your local machine.
-2. **Database Setup:** This application needs a database for smooth operation. Set the database connection string as per your setup.
-3. **Configure Paths:** Set your desired paths for input files, output files, archived files, and rejected files within the application.
-4. **Launch the Application:** Start the application. It will automatically process all the PDF files in the input directory.
-5. **Log Review:** Review the application logs to track and understand all operations carried out on each file.
-6. **Output Verification:** Paginated PDFs will be stored in the output folder, as specified in your configuration.
+2. **Font Database Setup:** This application needs a database with font-informations and -streams to be able to embed fonts. Set the database connection string as per your setup.
+3. **Create Frontend:** Create a frontend to call the PDF file operations.
 
 ## Dependencies
 
-The application requires **.NET Core 3.1+** runtime. It also makes use of the **iText7** library for the PDF processing tasks.
+The application requires **.NET Framework 4.8** runtime. It also makes use of the **iText7** library for the PDF processing tasks.
 
 ## License
 
@@ -32,4 +35,4 @@ This project is licensed under the GNU GENERAL PUBLIC LICENSE v3. For more infor
 
 ## Note
 
-Please note that this application is intended for use via the console/terminal and currently does not have a user interface. For any questions or issues, please raise a ticket in the GitHub repository.
+Please note that this library only provides the functionality and currently does not have a user interface. For any questions or issues, please raise a ticket in the GitHub repository.
