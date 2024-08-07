@@ -7,7 +7,7 @@ Because it does not need to display the PDF while performing the specified actio
 The library not only robustly handles errors but also maintains a comprehensive logging system for all operational activities.
 Additionally for all operational activities, it creates a backup that can be restored later on.
 
-## Featuresrückseite
+## Features
 
 - **Compress:** Removes duplicated references of images and other resources and therefore reduces a lot of space in the PDF-filesize.
 - **Font-Infos:** Retrieves all the informations from the fonts used in a PDF file including base-font, sub-type, encoding, if embedded or not, if subset or not and more.
